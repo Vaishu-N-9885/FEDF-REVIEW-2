@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Typography Demo — FEDF-REVIEW-2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600&family=Lora:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --font-ui: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+      --font-heading: 'Lora', Georgia, serif;
+      --font-button: 'Poppins', Arial, sans-serif;
+      --accent: #6B8DFF;
+      --bg: #f7f8fc;
+      --card: #fff;
+      --muted: #6b6b7a;
+    }
+    html,body{height:100%;margin:0;background:var(--bg);font-family:var(--font-ui);color:#222}
+    .wrap{max-width:960px;margin:48px auto;padding:24px}
+    .card{background:var(--card);border-radius:12px;padding:28px;box-shadow:0 10px 30px rgba(15,20,60,0.06)}
+    h1{font-family:var(--font-heading);font-size:40px;margin:0 0 8px}
+    h2{font-family:var(--font-heading);font-size:28px;margin:18px 0 6px}
+    p.lead{font-size:18px;color:var(--muted)}
+    .row{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px}
+    .btn{display:inline-block;padding:10px 18px;border-radius:10px;background:linear-gradient(90deg,#33E1A2 0%,#28C3BC 100%);color:#fff;font-weight:600;font-family:var(--font-button);text-decoration:none}
+    .sample-box{padding:14px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);background:#fafafa}
+    label{display:block;font-weight:600;margin-bottom:6px}
+    input{padding:10px 12px;border-radius:8px;border:1px solid #ddd;width:100%;box-sizing:border-box}
+    .muted{color:var(--muted);font-size:14px}
+    footer{margin-top:20px;color:var(--muted);font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Typography & UI Font Demo</h1>
+      <p class="lead">This page demonstrates the fonts used in the project: <strong>Lora</strong> for headings, <strong>Inter</strong> for body/UI, and <strong>Poppins</strong> for buttons & accents.</p>
+
+      <h2>Headings</h2>
+      <div class="row">
+        <div class="sample-box" style="flex:1"> 
+          <h1>H1 — The quick brown fox jumps over the lazy dog</h1>
+          <h2>H2 — The quick brown fox jumps over the lazy dog</h2>
+          <h3>H3 — The quick brown fox jumps over the lazy dog</h3>
+          <h4>H4 — The quick brown fox jumps over the lazy dog</h4>
+        </div>
+        <div class="sample-box" style="width:240px">
+          <p class="muted">Font stack for headings: Lora, Georgia, serif</p>
+        </div>
+      </div>
+
+      <h2>Body / Paragraphs</h2>
+      <div class="row">
+        <div class="sample-box" style="flex:1">
+          <p>Inter makes for a clean, neutral UI text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+          <p class="muted">Sample small text / caption using Inter.</p>
+        </div>
+      </div>
+
+      <h2>Buttons & Controls</h2>
+      <div class="row">
+        <a class="btn">Primary Action</a>
+        <a class="btn" style="background:linear-gradient(90deg,#6B8DFF, #9D7BFF)">Secondary</a>
+        <div style="flex:1;min-width:240px" class="sample-box">
+          <label for="name">Name</label>
+          <input id="name" placeholder="Type your name" />
+        </div>
+      </div>
+
+      <footer>
+        <div>Production demo (GitHub Pages): <a href="https://Vaishu-N-9885.github.io/FEDF-REVIEW-2/" target="_blank">https://Vaishu-N-9885.github.io/FEDF-REVIEW-2/</a></div>
+        <div>Open the main app at <a href="/" target="_blank">/ (root)</a> while dev server is running.</div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
