@@ -18,10 +18,20 @@ const Signup = () => {
     return <Authenticator initialState="signUp" />;
   }
 
+  const validateEmail = (e) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);
+
   const handleSignup = async () => {
     setError('');
     if (!username.trim() || !email.trim() || !password) {
       setError('All fields are required');
+      return;
+    }
+    if (!validateEmail(email)) {
+      setError('Invalid email format');
+      return;
+    }
+    if (password.length < 6) {
+      setError('Password must be at least 6 characters');
       return;
     }
     if (password !== confirm) {
@@ -30,6 +40,8 @@ const Signup = () => {
     }
     try {
       await createUser({ username: username.trim(), email: email.trim(), password });
+      // Store session in localStorage
+      localStorage.setItem('demo_user', JSON.stringify({ username: username.trim(), email: email.trim(), signupTime: new Date().toISOString() }));
       navigate('/dashboard');
     } catch (e) {
       setError(e.message || 'Registration failed');
